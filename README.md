@@ -4,6 +4,14 @@
 
 An agent guide for carrying out a safe first review of born-digital file listings.
 
+## Install with your AI agent
+
+Copy and paste this into your agent:
+
+```text
+Install the Born-Digital Triage skill from https://github.com/matthewbrutonall/born-digital-triage in your skills directory. Keep its SKILL.md and references together, then confirm that you can use the skill for a born-digital triage. This skill does not require the separate CLI; do not install the CLI unless I ask.
+```
+
 It helps an agent:
 
 - explain what archival triage means;
