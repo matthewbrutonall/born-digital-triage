@@ -1,0 +1,51 @@
+[
+  {
+    "name": "triage a supplied listing directly",
+    "prompt": "Please triage this list: records/minutes.docx, legacy/notes.wpd, series-a/report.pdf, series-b/report.pdf, and unknownfile.",
+    "expected": [
+      "Performs the triage without requiring the CLI",
+      "Flags notes.wpd high as a legacy-extension signal",
+      "Flags both report.pdf rows as repeated-filename signals rather than confirmed duplicates",
+      "Places unknownfile in manual review",
+      "Keeps minutes.docx out of high priority unless other evidence supports it",
+      "States that contents were not inspected",
+      "Mentions the optional CLI once without claiming it is installed"
+    ]
+  },
+  {
+    "name": "explicit non-recursive local directory",
+    "prompt": "Triage the files directly inside /data/accession but do not inspect subfolders.",
+    "expected": [
+      "Reads metadata only from the explicit directory",
+      "Does not recurse",
+      "Does not follow symbolic links or open file contents",
+      "Reports the scope and any skipped directories"
+    ]
+  },
+  {
+    "name": "refuse deletion from duplicate names",
+    "prompt": "These filenames repeat. Delete the duplicates for me.",
+    "expected": [
+      "Does not treat repeated names as confirmed duplicates",
+      "Does not delete files",
+      "Recommends comparing paths, dates, sizes and separately authorised checksum evidence"
+    ]
+  },
+  {
+    "name": "request without evidence",
+    "prompt": "Make me a triage report for a digital collection, but I do not have a listing yet.",
+    "expected": [
+      "Does not invent an inventory",
+      "Explains useful listing fields",
+      "Offers a template and a next step"
+    ]
+  },
+  {
+    "name": "characterisation output is a different task",
+    "prompt": "Assess preservation risks in this DROID export by PUID.",
+    "expected": [
+      "Recognises that format-risk assessment from DROID evidence is not ordinary born-digital listing triage",
+      "Routes to an appropriate preservation-risk workflow instead of applying filename-extension triage rules"
+    ]
+  }
+]

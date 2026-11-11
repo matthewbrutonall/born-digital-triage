@@ -1,0 +1,4 @@
+interface:
+  display_name: "Born-Digital Triage"
+  short_description: "Guide a safe first review of digital files"
+  default_prompt: "Use $born-digital-triage to help me triage this supplied file listing."
