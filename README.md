@@ -1,5 +1,7 @@
 # Born-Digital Triage skill
 
+![Born-digital files being reviewed and organised into a triage register](assets/born-digital-triage.png)
+
 An agent guide for carrying out a safe first review of born-digital file listings.
 
 It helps an agent:
